@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.image-gallery-thumbnail:focus,
+.image-gallery-thumbnail:hover,
+.image-gallery-thumbnail.active {
+	border-color: #80190e !important;
+}
+
+.image-gallery-bullet:hover {
+	background-color: #80190e !important;
+	border-color: #80190e !important;
+}
+
+.image-gallery-slides {
+	border-radius: 20px;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.image-gallery-thumbnail-image {
+	max-height: 62px;
+	object-fit: cover;
+}
+
+.image-gallery{
+    max-width: 800px;
+}
+
+@media (max-width: 768px) {
+	.image-gallery {
+		max-width: 500px;
+	}
+
+    .image-gallery-slides {
+        max-height: 300px;
+    }
+}
+/*mobile*/
+@media (max-width: 480px) {
+    .image-gallery {
+        max-width: 300px;
+    }
+
+    .image-gallery-slides {
+        max-height: 200px;
+    }
+    
+}
