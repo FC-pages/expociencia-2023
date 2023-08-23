@@ -4,6 +4,29 @@ import Layout from '@/app/layout'
 const title = 'Ciencias de la Computación'
 
 export default function CienciasComputacionPage() {
+	{
+		// Crear array de proyectos
+	}
+	const proyectos = [
+		'Proyecto 1',
+		'Proyecto 2',
+		'Proyecto 3',
+		'Proyecto 4',
+		'Proyecto 5',
+		'Proyecto 6',
+		'Proyecto 7',
+		'Proyecto 8',
+		'Proyecto 9',
+		'Proyecto 10',
+		'Proyecto 11',
+		'Proyecto 12',
+		'Proyecto 13',
+		'Proyecto 14',
+		'Proyecto 15',
+		'Proyecto 16',
+		
+	]
+
 	return (
 		<Layout title={title}>
 			<Container className='flex flex-row items-center justify-center py-6 gap-6'>
@@ -19,37 +42,11 @@ export default function CienciasComputacionPage() {
 				</p>
 			</Container>
 			<div className='flex flex-col w-full'>
-				{/* Change background color all width */}
-				<div className='bg-red-100 h-96'>
-					{/* Listar nombres en 3 columnas */}
+				<div className='bg-red-100 h-auto'>
 					<Container className='grid grid-cols-3 py-6 gap-4 justify-items-start'>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
-						<div>&#9632; ------</div>
+						{proyectos.map((proyecto, index) => (
+							<div key={index} className='text-lg'>&#9632; {proyecto}</div>
+						))}
 					</Container>
 				</div>
 			</div>
