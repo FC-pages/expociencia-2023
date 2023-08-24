@@ -14,7 +14,7 @@ export default {
             },
             colors: {
                 'primary': '#80190e',
-            }
+            },
         }
 	},
     darkMode: "class",
