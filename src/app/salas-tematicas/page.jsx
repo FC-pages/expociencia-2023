@@ -2,9 +2,7 @@ import { Card, CardHeader, Chip, Image, Link } from '@nextui-org/react'
 import Container from '@/components/Container'
 import Layout from '@/app/layout'
 
-const title = 'Salas Temáticas'
-
-export default function SalasTematicasPage() {
+export default function SalasTematicasPage({ title }) {
 	return (
 		<Layout title={title}>
 			<Container className='flex flex-col items-center py-6 gap-6'>
