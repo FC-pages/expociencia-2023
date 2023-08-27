@@ -1,9 +1,7 @@
 import Container from '@/components/Container'
 import Layout from '@/app/layout'
 
-const title = 'Ciencias de la Computación'
-
-export default function CienciasComputacionPage() {
+export default function CienciasComputacionPage({ title }) {
 	{
 		// Crear array de proyectos
 	}
@@ -23,8 +21,7 @@ export default function CienciasComputacionPage() {
 		'Proyecto 13',
 		'Proyecto 14',
 		'Proyecto 15',
-		'Proyecto 16',
-		
+		'Proyecto 16'
 	]
 
 	return (
@@ -45,7 +42,9 @@ export default function CienciasComputacionPage() {
 				<div className='bg-red-100 h-auto'>
 					<Container className='grid grid-cols-3 py-6 gap-4 justify-items-start'>
 						{proyectos.map((proyecto, index) => (
-							<div key={index} className='text-lg'>&#9632; {proyecto}</div>
+							<div key={index} className='text-lg'>
+								&#9632; {proyecto}
+							</div>
 						))}
 					</Container>
 				</div>

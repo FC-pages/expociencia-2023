@@ -5,10 +5,7 @@ import Container from '@/components/Container'
 import Layout from '@/app/layout'
 import { submitFormData } from '@/services/fetchForm'
 
-const title = 'Contacto'
-
-export default function ContactoPage() {
-
+export default function ContactoPage({ title }) {
 	const [status, setStatus] = useState()
 
 	useEffect(() => {

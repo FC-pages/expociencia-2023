@@ -1,8 +1,6 @@
 import Container from '@/components/Container'
 import Layout from '@/app/layout'
 
-const title = 'Matemática'
-
 const project = [
 	'Proyecto 1 ...',
 	'Proyecto 2 ...',
@@ -15,7 +13,7 @@ const project = [
 	'Proyecto 9 ...'
 ]
 
-export default function MatematicaPage() {
+export default function MatematicaPage({ title }) {
 	return (
 		<Layout title={title}>
 			<Container className='flex flex-col items-center py-6 gap-6'>
@@ -35,7 +33,11 @@ export default function MatematicaPage() {
 							simulaciones a modelos que se plantean.
 						</p>
 						<picture>
-							<img src='/images/icon-matematica.webp' alt='icono de matemática' className='w-full h-full'/>
+							<img
+								src='/images/icon-matematica.webp'
+								alt='icono de matemática'
+								className='w-full h-full'
+							/>
 						</picture>
 					</div>
 				</section>

@@ -2,7 +2,6 @@ import Container from '@/components/Container'
 import ImageGallery from 'react-image-gallery'
 import Layout from '@/app/layout'
 import { Button } from '@nextui-org/react'
-const title = 'Inicio'
 
 const images = [
 	{
@@ -51,7 +50,7 @@ const images = [
 	}
 ]
 
-export default function InicioPage() {
+export default function InicioPage({ title }) {
 	return (
 		<Layout title={title}>
 			<Container className='flex flex-col items-center py-12 gap-16 lg:gap-20'>
@@ -91,7 +90,9 @@ export default function InicioPage() {
 						de 14h00 a 15h30.
 					</p>
 					<div className='flex justify-center'>
-					<Button color='primary' className='w-fit text-lg'>Inscríbite aquí</Button>
+						<Button color='primary' className='w-fit text-lg'>
+							Inscríbite aquí
+						</Button>
 					</div>
 				</div>
 				<div className='flex flex-col w-full gap-12'>

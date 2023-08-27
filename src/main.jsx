@@ -17,14 +17,18 @@ const router = createBrowserRouter(
 		<Route path='/' element={<App />}>
 			{routes.map((route, index) => (
 				<React.Fragment key={index}>
-					<Route key={route.path} path={route.path} element={<route.element />} />
+					<Route
+						key={route.path}
+						path={route.path}
+						element={<route.element title={route.name} />}
+					/>
 					{route.children &&
 						route.children.map((child, index) => (
 							<React.Fragment key={index}>
 								<Route
 									key={child.path}
-									path={[route.path,child.path].join('')}
-									element={<child.element />}
+									path={[route.path, child.path].join('')}
+									element={<child.element title={child.name} />}
 								/>
 							</React.Fragment>
 						))}
