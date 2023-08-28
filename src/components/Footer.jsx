@@ -1,5 +1,5 @@
 import { FaMap, FaPhone, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
-import Container from '@/components/Container'
+import { Container } from '@/components/core'
 
 export default function Footer() {
 	return (

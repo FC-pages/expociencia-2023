@@ -31,14 +31,14 @@ export const routes = [
                 element: CienciasComputacionPage,
             },
             {
-                name: "Ingeniería Física",
-                path: "/ingenieria-fisica",
-                element: IngenieriaFisicaPage,
-            },
-            {
                 name: "Física",
                 path: "/fisica",
                 element: FisicaPage,
+            },
+            {
+                name: "Ingeniería Física",
+                path: "/ingenieria-fisica",
+                element: IngenieriaFisicaPage,
             },
             {
                 name: "Matemática",

@@ -1,52 +1,45 @@
-import Container from '@/components/Container'
+import React, { useState, useEffect } from 'react'
 import Layout from '@/app/layout'
+import { Container, Text, Title } from '@/components/core'
+import { getPhysicalProjects as fetchData } from '@/services/fetchProjects'
 
 export default function FisicaPage({ title }) {
+	const [projects, setProjects] = useState([])
+
+	useEffect(() => {
+		fetchData('2023-1')
+			.then((data) => setProjects(data))
+			.catch((err) => console.log(err))
+	}, [])
+
 	return (
 		<Layout title={title}>
-			<Container className='flex flex-col items-center py-6 gap-6'>
-				<h1 className='text-4xl font-bold mb-2 border-b-4 border-primary'>{title}</h1>
-				<div className='flex flex-col text-justify gap-6 text-base'>
-					<p>
-						Se mostrará de manera lúdica como interactúan diversos sistemas mecánicos,
-						además se hará uso de efectos ópticos para poder ver en cámara lenta algunos
-						procesos asociados a los fluidos y las ondas mecánicas.
-					</p>
-					<p>
-						Veremos como se genera la electricidad estática y como se almacena, además
-						de generar ondas electromagnéticas y su detección. El cuerpo humano tiene
-						propiedades eléctricas, las cuales serán experimentadas, sin ningún riesgo,
-						por los participantes.
-					</p>
-					<p>
-						Estas y muchas experiencias más las podrán encontrar en las salas de física.
-					</p>
+			<Container className='flex flex-col py-16 px-2 gap-4'>
+				<div className='flex flex-col-reverse items-center justify-center gap-4 md:flex-row'>
+					<Title className='text-center'>{title}</Title>
+
+					<img src='/images/icon-fisica.webp' alt='icono' className='w-36 h-auto' />
 				</div>
+				<Text className='text-center'>
+					Se mostrará de manera lúdica como interactúan diversos sistemas mecánicos,
+					además se hará uso de efectos ópticos para poder ver en cámara lenta algunos
+					procesos asociados a los fluidos y las ondas mecánicas. Veremos como se genera
+					la electricidad estática y como se almacena, además de generar ondas
+					electromagnéticas y su detección. El cuerpo humano tiene propiedades eléctricas,
+					las cuales serán experimentadas, sin ningún riesgo, por los participantes. Estas
+					y muchas experiencias más las podrán encontrar en las salas de física.
+				</Text>
 			</Container>
-			<div className='bg-red-100'>
-				<Container className='flex flex-col py-6 gap-6 pb-10'>
-					<h2 className='text-3xl font-bold mb-2 italic'>Relación de experimentos</h2>
-					<div className='font-semibold'>
-						<ul className='grid grid-cols-3 list-disc gap-10 text-base'>
-							<li>Tensegridad</li>
-							<li>Tubo de Rubens</li>
-							<li>Péndulos danzantes</li>
-							<li>Cañón de alcohol</li>
-							<li>Aero deslizador</li>
-							<li>Anillos de Thompson</li>
-							<li>Placa de Chladni</li>
-							<li>Braquistocrona magnética</li>
-							<li>Motor de Stirling</li>
-							<li>Cajita electrostática</li>
-							<li>Fluorescencia</li>
-							<li>Efectos estroboscópicos</li>
-							<li>Reflexión y refracción de la luz</li>
-							<li>Generación y detección de ondas electromagnéticas</li>
-							<li>y muchos más ...</li>
-						</ul>
-					</div>
-				</Container>
-			</div>
+			<Container className='py-6 px-2' background='bg-red-100'>
+				<Title className='text-start'>Relación de experimentos</Title>
+				<ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-6 gap-4 justify-items-start list-disc '>
+					{projects.map((project, index) => (
+						<li key={index} className='text-base'>
+							{project}
+						</li>
+					))}
+				</ul>
+			</Container>
 		</Layout>
 	)
 }

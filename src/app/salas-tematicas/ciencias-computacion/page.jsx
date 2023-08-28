@@ -1,54 +1,42 @@
-import Container from '@/components/Container'
+import React, { useState, useEffect } from 'react'
 import Layout from '@/app/layout'
+import { Container, Text, Title } from '@/components/core'
+import { getComputerScienceProjects as fetchData } from '@/services/fetchProjects'
 
 export default function CienciasComputacionPage({ title }) {
-	{
-		// Crear array de proyectos
-	}
-	const proyectos = [
-		'Proyecto 1',
-		'Proyecto 2',
-		'Proyecto 3',
-		'Proyecto 4',
-		'Proyecto 5',
-		'Proyecto 6',
-		'Proyecto 7',
-		'Proyecto 8',
-		'Proyecto 9',
-		'Proyecto 10',
-		'Proyecto 11',
-		'Proyecto 12',
-		'Proyecto 13',
-		'Proyecto 14',
-		'Proyecto 15',
-		'Proyecto 16'
-	]
+	const [projects, setProjects] = useState([])
+
+	useEffect(() => {
+		fetchData('2023-1')
+			.then((data) => setProjects(data))
+			.catch((err) => console.log(err))
+	}, [])
 
 	return (
 		<Layout title={title}>
-			<Container className='flex flex-row items-center justify-center py-6 gap-6'>
-				<h1 className='text-4xl font-bold mb-2 border-b-4 border-primary'>{title}</h1>
-				<img src='/images/icon-computacion.webp' alt='Logo' className='w-40 h-36' />
-			</Container>
-			<Container className='flex flex-col items-center py-6 gap-6'>
-				<p className='text-2xl  text-justify mb-2 border-primary'>
+			<Container className='flex flex-col py-16 px-2 gap-4'>
+				<div className='flex flex-col-reverse items-center justify-center gap-4 md:flex-row'>
+					<Title className='text-center'>{title}</Title>
+
+					<img src='/images/icon-computacion.webp' alt='icono' className='w-36 h-auto' />
+				</div>
+				<Text className='text-center'>
 					La ciencia de la computación es una disciplina contemporánea orientada a
 					solucionar porblemas en el campo de la computación, tanto a nivel de hardware
 					como de software, para contribuir en la investigación y las innovaciones
-					computacionales que requieren de las instituciones, empresas y el gobierno.{' '}
-				</p>
+					computacionales que requieren de las instituciones, empresas y el gobierno.
+				</Text>
 			</Container>
-			<div className='flex flex-col w-full'>
-				<div className='bg-red-100 h-auto'>
-					<Container className='grid grid-cols-3 py-6 gap-4 justify-items-start'>
-						{proyectos.map((proyecto, index) => (
-							<div key={index} className='text-lg'>
-								&#9632; {proyecto}
-							</div>
-						))}
-					</Container>
-				</div>
-			</div>
+			<Container className='py-6 px-2' background='bg-red-100'>
+				<Title className='text-start'>Relación de experimentos</Title>
+				<ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-6 gap-4 justify-items-start list-disc '>
+					{projects.map((project, index) => (
+						<li key={index} className='text-base'>
+							{project}
+						</li>
+					))}
+				</ul>
+			</Container>
 		</Layout>
 	)
 }

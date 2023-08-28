@@ -1,5 +1,5 @@
-import Container from '@/components/Container'
 import Layout from '@/app/layout'
+import { Container } from '@/components/core'
 
 export default function RegistroPage({ title }) {
 	return (

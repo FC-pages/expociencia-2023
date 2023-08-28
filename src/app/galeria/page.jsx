@@ -1,6 +1,6 @@
 import ImageGallery from 'react-image-gallery'
-import Container from '@/components/Container'
 import Layout from '@/app/layout'
+import { Container } from '@/components/core'
 
 import 'react-image-gallery/styles/css/image-gallery.css'
 
