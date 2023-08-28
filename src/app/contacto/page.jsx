@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Button, Input, Textarea } from '@nextui-org/react'
 import { BsCheckCircle } from 'react-icons/bs'
-import Container from '@/components/Container'
+import { Container } from '@/components/core'
 import Layout from '@/app/layout'
 import { submitFormData } from '@/services/fetchForm'
 

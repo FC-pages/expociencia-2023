@@ -1,7 +1,7 @@
-import Container from '@/components/Container'
 import ImageGallery from 'react-image-gallery'
-import Layout from '@/app/layout'
 import { Button } from '@nextui-org/react'
+import Layout from '@/app/layout'
+import { Container } from '@/components/core'
 
 const images = [
 	{
@@ -53,7 +53,7 @@ const images = [
 export default function InicioPage({ title }) {
 	return (
 		<Layout title={title}>
-			<Container className='flex flex-col items-center py-12 gap-16 lg:gap-20'>
+			<Container className='flex flex-col items-center py-12 px-2 gap-16 lg:gap-20'>
 				<h1 className='text-xl font-medium text-center'>
 					La Facultad de Ciencias de la Universidad Nacional de Ingeniería les invita a su
 					<br />

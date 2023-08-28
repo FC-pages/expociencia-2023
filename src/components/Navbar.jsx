@@ -1,15 +1,14 @@
 import {Fragment, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-
 import { FaChevronDown, FaCaretRight } from 'react-icons/fa'
-
+import { Container } from '@/components/core'
 import { routes } from '@/routes'
-import Container from '@/components/Container'
+
 
 export default function Navbar() {
 	return (
 		<div className='bg-primary text-white'>
-			<Container className='flex flex-row justify-between h-14'>
+			<Container className='flex flex-row justify-between h-14 px-2'>
 				<Link to='/' className='flex flex-row items-center gap-2'>
 					<img src='/images/logo.webp' alt='Logo' className='w-8 h-8' />
 					<p className='font-medium'>Expociencia 2023</p>
