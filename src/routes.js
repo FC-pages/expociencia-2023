@@ -7,7 +7,6 @@ import IngenieriaFisicaPage from "./app/salas-tematicas/ingenieria-fisica/page";
 import MatematicaPage from "./app/salas-tematicas/matematica/page";
 import QuimicaPage from "./app/salas-tematicas/quimica/page";
 import ContactoPage from "./app/contacto/page";
-import RegistroPage from "./app/registro/page";
 
 export const routes = [
     {
@@ -56,10 +55,5 @@ export const routes = [
         name: "Contacto",
         path: "/contacto",
         element: ContactoPage,
-    },
-    {
-        name: "Registro",
-        path: "/registro",
-        element: RegistroPage,
     },
 ]
