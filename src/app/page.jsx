@@ -120,44 +120,6 @@ export default function InicioPage({ title }) {
 						</Button>
 					</div>
 				</div>
-				<div className='flex flex-col w-full gap-12'>
-					<h1 className='text-left font-extrabold text-primary text-3xl'>IMPORTANTE</h1>
-					<ul className='flex flex-col gap-2 list-disc list-inside'>
-						<li>
-							La fecha y hora de visita a la exposición se definirá en el momento de
-							la inscripción.
-						</li>
-						<li>
-							Si la inscripción se realiza de forma presencial, será de acuerdo al
-							orden de llegada de los representantes de los colegios.
-						</li>
-						<li>
-							Si la inscripción se hace por web, se debe confirmar el horario de
-							visita.
-						</li>
-						<li>
-							La persona que se encargue de inscribir al colegio debe entregar una
-							comunicación del Director dirigida al Decano de la Facultad de Ciencias
-							– UNI, manifestando el interés que tiene el colegio de participar y en
-							donde figure el nombre de la persona encargada de registrar la
-							participación de sus alumnos. El modelo de carta se puede descargar
-							aqui, y debe ser enviado a través del formulario de inscripción.
-						</li>
-						<li>
-							El número máximo de estudiantes por delegación es de 30, y puede haber
-							varias delegaciones por colegio. Los estudiantes deben venir acompañados
-							por uno o dos profesores en la fecha y hora asignada para su visita.
-							Para cualquier otra consulta, por favor escribir a
-							<a
-								href='mailto:proy_social_fc@uni.edu.pe'
-								className=' text-primary font-bold '>
-								{' '}
-								proy_social_fc@uni.edu.pe
-							</a>
-						</li>
-					</ul>
-				</div>
-
 				<ImageGallery
 					items={images}
 					autoPlay={true}
