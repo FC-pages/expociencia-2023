@@ -95,7 +95,7 @@ export default function Footer() {
 						</li>
 						<li>
 							<a
-								href='https://www.instagram.com/fc_uni/'
+								href='https://www.instagram.com/expociencia_fc/'
 								target='_blank'
 								rel='noopener noreferrer'
 								className='flex flex-row items-center gap-2'>

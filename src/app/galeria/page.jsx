@@ -55,7 +55,7 @@ export default function GaleriaPage({ title }) {
 	return (
 		<Layout title={title}>
 			<Container className='flex flex-col items-center py-6 gap-6'>
-				<h1 className='text-4xl mb-2 font-bold border-b-4 border-primary'>{title}</h1>
+				<h1 className='text-primary font-extrabold text-4xl text-center mb-2'>{title}</h1>
 				<ImageGallery
 					items={images}
 					autoPlay={true}

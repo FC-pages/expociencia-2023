@@ -20,7 +20,7 @@ export default function QuimicaPage() {
 				<div className='flex flex-col-reverse items-center justify-center gap-4 md:flex-row'>
 					<Title className='text-center'>{title}</Title>
 
-					<img src='/images/icon-matematica.webp' alt='icono' className='w-36 h-auto' />
+					<img src='/images/icon-quimica.webp' alt='icono' className='w-36 h-auto' />
 				</div>
 				<Text className='text-center'>
 					La Química es una disciplina científica que se dedica al estudio de la materia,

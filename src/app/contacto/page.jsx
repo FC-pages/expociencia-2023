@@ -53,7 +53,7 @@ export default function ContactoPage({ title }) {
 	return (
 		<Layout title={title}>
 			<Container className='flex flex-col items-center py-6 gap-6 min-h-[428px]'>
-				<h1 className='text-4xl font-bold  mb-2 border-b-4 border-primary'>{title}</h1>
+				<h1 className='text-primary font-extrabold text-4xl text-center mb-8'>{title}</h1>
 				<form
 					onSubmit={handleSubmit}
 					method='POST'
