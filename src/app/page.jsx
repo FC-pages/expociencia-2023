@@ -51,6 +51,11 @@ const images = [
 ]
 
 export default function InicioPage({ title }) {
+	const redirectToForm = () => {
+		// Redirige a una página web externa
+		window.open('https://forms.office.com/r/QrfKp3Z5kp?origin=lprLink', '_blank')
+	}
+
 	return (
 		<Layout title={title}>
 			<Container className='flex flex-col items-center py-12 px-2 gap-16 lg:gap-20'>
@@ -83,14 +88,34 @@ export default function InicioPage({ title }) {
 						INSCRIPCIONES
 					</h1>
 					<p className='text-justify'>
-						La inscripción puede ser realizada vía web, llenando el formulario de
-						inscripción, o en la misma Unidad de Responsabilidad Social de la Facultad
-						(Sector R - 2do. piso, ingreso por la puerta No. 5, teléfono 4811070, anexo
-						5008), desde FECHAINICIO hasta FECHALIMITE en el horario de 8h00 a 13h00 y
-						de 14h00 a 15h30.
+						Expociencia 2023 se llevará a cabo en la Facultad de Ciencias de la
+						Universidad Nacional de Ingeniería, en la ciudad de Lima, los días 15, 16 y
+						17 de noviembre en los horarios de 9 a 12 pm y de 1:30 a 4:30 pm. La
+						pre-inscripción puede ser realizada llenando el formulario:
+						<a
+							href='https://forms.office.com/r/QrfKp3Z5kp?origin=lprLink'
+							target='_blank'
+							className=' text-primary font-bold '
+							rel='noreferrer'>
+							{' '}
+							https://forms.office.com/r/QrfKp3Z5kp?origin=lprLink.{' '}
+						</a>
+						Para mayor información puede escribir al correo electrónico
+						<a
+							href='mailto:expocienciafc@uni.edu.pe'
+							className=' text-primary font-bold '>
+							{' '}
+							expocienciafc@uni.edu.pe
+						</a>{' '}
+						o llamar al teléfono 4811070 (anexo 5008), desde el 4 de octubre hasta el 5
+						de noviembre.
+					</p>
+					<p>
+						Las instituciones pre-inscritas serán contactadas para coordinar su visita y
+						brindarles indicaciones adicionales
 					</p>
 					<div className='flex justify-center'>
-						<Button color='primary' className='w-fit text-lg'>
+						<Button color='primary' className='w-fit text-lg' onClick={redirectToForm}>
 							Inscríbite aquí
 						</Button>
 					</div>
