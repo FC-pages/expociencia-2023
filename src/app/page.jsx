@@ -3,53 +3,6 @@ import { Button } from '@nextui-org/react'
 import Layout from '@/app/layout'
 import { Container } from '@/components/core'
 
-const images = [
-	{
-		original: '/images/carousel-1.webp',
-		thumbnail: '/thumbnails/carousel-1.thumbnail.webp'
-	},
-	{
-		original: '/images/carousel-2.webp',
-		thumbnail: '/thumbnails/carousel-2.thumbnail.webp'
-	},
-	{
-		original: '/images/carousel-3.webp',
-		thumbnail: '/thumbnails/carousel-3.thumbnail.webp'
-	},
-	{
-		original: '/images/carousel-4.webp',
-		thumbnail: '/thumbnails/carousel-4.thumbnail.webp'
-	},
-	{
-		original: '/images/carousel-5.webp',
-		thumbnail: '/thumbnails/carousel-5.thumbnail.webp'
-	},
-	{
-		original: '/images/carousel-6.webp',
-		thumbnail: '/thumbnails/carousel-6.thumbnail.webp'
-	},
-	{
-		original: '/images/carousel-7.webp',
-		thumbnail: '/thumbnails/carousel-7.thumbnail.webp'
-	},
-	{
-		original: '/images/carousel-8.webp',
-		thumbnail: '/thumbnails/carousel-8.thumbnail.webp'
-	},
-	{
-		original: '/images/carousel-9.webp',
-		thumbnail: '/thumbnails/carousel-9.thumbnail.webp'
-	},
-	{
-		original: '/images/carousel-10.webp',
-		thumbnail: '/thumbnails/carousel-10.thumbnail.webp'
-	},
-	{
-		original: '/images/carousel-11.webp',
-		thumbnail: '/thumbnails/carousel-11.thumbnail.webp'
-	}
-]
-
 export default function InicioPage({ title }) {
 	const redirectToForm = () => {
 		// Redirige a una página web externa
@@ -120,16 +73,12 @@ export default function InicioPage({ title }) {
 						</Button>
 					</div>
 				</div>
-				<ImageGallery
-					items={images}
-					autoPlay={true}
-					showBullets={true}
-					showFullscreenButton={false}
-					showPlayButton={false}
-					showNav={false}
-					showThumbnails={true}
-					lazyLoad={true}
-				/>
+                <div className='flex flex-col w-full gap-12'>
+					<h1 className='text-left font-extrabold text-primary text-3xl'>
+						AFICHES
+					</h1>
+                    <img src='/images/afiche-2023.webp' className='mx-auto w-fit rounded-lg shadow-lg shadow-slate-400'/>
+                </div>
 			</Container>
 		</Layout>
 	)
