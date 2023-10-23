@@ -1,4 +1,3 @@
-import ImageGallery from 'react-image-gallery'
 import { Button } from '@nextui-org/react'
 import Layout from '@/app/layout'
 import { Container } from '@/components/core'
