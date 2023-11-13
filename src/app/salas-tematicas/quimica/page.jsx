@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Layout from '@/app/layout'
-import { Container, Text, Title } from '@/components/core'
+import { Container, Text, Title, Modal } from '@/components/core'
 import { getChemistryProjects as fetchData } from '@/services/fetchProjects'
 
 const title = 'Química'
 
 export default function QuimicaPage() {
+	const [open, setOpen] = useState(false)
 	const [projects, setProjects] = useState([])
 
 	useEffect(() => {
@@ -13,6 +14,10 @@ export default function QuimicaPage() {
 			.then((data) => setProjects(data))
 			.catch((err) => console.log(err))
 	}, [])
+
+	const handleOpen = () => {
+		setOpen(!open)
+	}
 
 	return (
 		<Layout title={title}>
@@ -35,7 +40,18 @@ export default function QuimicaPage() {
 				<ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-6 gap-4 justify-items-start list-disc '>
 					{projects.map((project, index) => (
 						<li key={index} className='text-base'>
-							{project}
+							<button onClick={handleOpen}>{project.title}</button>
+							{open && (
+								<Modal onClick={handleOpen}>
+									<img
+										src={project.image}
+										alt={project.title}
+										className='w-[200px] h-[200px] object-cover rounded-md'
+									/>
+									<h1 className='font-semibold text-lg'>{project.title}</h1>
+									<p className='w-full text-left'>{project.description}</p>
+								</Modal>
+							)}
 						</li>
 					))}
 				</ul>
