@@ -68,7 +68,7 @@ export default function InicioPage({ title }) {
 					</p>
 					<div className='flex justify-center'>
 						<Button color='primary' className='w-fit text-lg' onClick={redirectToForm}>
-							Inscríbite aquí
+							Inscríbete aquí
 						</Button>
 					</div>
 				</div>

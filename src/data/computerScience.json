@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Ataques en redes WiFi con WPA/WPA2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies sem vitae sapien facilisis, et facilisis odio fermentum. Aliquam blandit magna a sem aliquet vestibulum. Suspendisse potenti.",
+        "image": "http://placekitten.com/200/300"
+    },
+    {
+        "title": "Smart Transit",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies sem vitae sapien facilisis, et facilisis odio fermentum. Aliquam blandit magna a sem aliquet vestibulum. Suspendisse potenti.",
+        "image": "http://placekitten.com/200/300"
+    },
+    {
+        "title": "Robot Seguidor de Línea",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies sem vitae sapien facilisis, et facilisis odio fermentum. Aliquam blandit magna a sem aliquet vestibulum. Suspendisse potenti.",
+        "image": "http://placekitten.com/200/300"
+    },
+    {
+        "title": "Robot a control remoto",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies sem vitae sapien facilisis, et facilisis odio fermentum. Aliquam blandit magna a sem aliquet vestibulum. Suspendisse potenti.",
+        "image": "http://placekitten.com/200/300"
+    },
+    {
+        "title": "Robot evita obstáculos",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies sem vitae sapien facilisis, et facilisis odio fermentum. Aliquam blandit magna a sem aliquet vestibulum. Suspendisse potenti.",
+        "image": "http://placekitten.com/200/300"
+    },
+    {
+        "title": "Aprendizaje por refuerzo en videojuegos",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies sem vitae sapien facilisis, et facilisis odio fermentum. Aliquam blandit magna a sem aliquet vestibulum. Suspendisse potenti.",
+        "image": "http://placekitten.com/200/300"
+    },
+    {
+        "title": "Aplicación con Mediapipe",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies sem vitae sapien facilisis, et facilisis odio fermentum. Aliquam blandit magna a sem aliquet vestibulum. Suspendisse potenti.",
+        "image": "http://placekitten.com/200/300"
+    },
+    {
+        "title": "Mini Cluster de Raspberry",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies sem vitae sapien facilisis, et facilisis odio fermentum. Aliquam blandit magna a sem aliquet vestibulum. Suspendisse potenti.",
+        "image": "http://placekitten.com/200/300"
+    },
+    {
+        "title": "Big Data",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies sem vitae sapien facilisis, et facilisis odio fermentum. Aliquam blandit magna a sem aliquet vestibulum. Suspendisse potenti.",
+        "image": "http://placekitten.com/200/300"
+    },
+    {
+        "title": "Problema de enrutamiento vehicular (VRP)",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies sem vitae sapien facilisis, et facilisis odio fermentum. Aliquam blandit magna a sem aliquet vestibulum. Suspendisse potenti.",
+        "image": "http://placekitten.com/200/300"
+    }
+]
